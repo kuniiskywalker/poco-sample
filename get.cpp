@@ -68,7 +68,7 @@ int main(int argc, char **argv)
         string director = object->get("director");
         float rating = object->get("rating");
 
-		cout << string("response:") << id << name << director << rating << endl;
+		cout << string("id:") << id << string(", name:") << name << string(", director:") << director << string(", rating:") << rating << endl;
 	}
 	catch ( Poco::Exception& ex )
 	{
