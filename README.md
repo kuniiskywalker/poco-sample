@@ -18,6 +18,12 @@ make build
 
 ## Run
 
+### Post Sending
 ```
-make run
+make run ARG="./get.o"
+```
+
+### Post Sending
+```
+make run ARG="./post.o {Id} {Name}"
 ```

@@ -43,15 +43,11 @@ int main(int argc, char **argv)
 		// [
         //   {
         //     "id": 1,
-        //     "name": "The Godfather",
-        //     "director": "Francis Ford Coppola",
-        //     "rating": 9.1
+        //     "name": "The Godfather"
         //   },
         //   {
         //     "id": 2,
-        //     "name": "Casablanca",
-        //     "director": "Michael Curtiz",
-        //     "rating": 8.8
+        //     "name": "Casablanca"
         //   }
         // ]
 		string json = sstr.str();
@@ -65,10 +61,8 @@ int main(int argc, char **argv)
 
         int id = object->get("id");
         string name = object->get("name");
-        string director = object->get("director");
-        float rating = object->get("rating");
 
-		cout << string("id:") << id << string(", name:") << name << string(", director:") << director << string(", rating:") << rating << endl;
+		cout << string("id:") << id << string(", name:") << name << endl;
 	}
 	catch ( Poco::Exception& ex )
 	{
