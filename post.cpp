@@ -64,7 +64,19 @@ string ofPostRequest(string url, string body, map<string,string> headers) {
 
 int main(int argc, char **argv)
 {
-    string body = "{ \"id\": 3, \"name\": \"Inception\", \"director\": \"Christopher Nolan\", \"rating\": 9.0 }";
+    int i;
+
+    // printf("文字列の個数 %d\n",argc);
+    // for(i=0;i<argc;i++)
+    //   printf("%d 番目の文字列 %s\n",i,argv[i]);
+
+    string id   = argv[1];
+    string name = argv[2];
+
+    string body = "{ \"id\":" + id + ", \"name\": \"" + name + "\" }";
+
+    cout << body << endl;
+
     map<string,string> headers;
     headers["Content-Type"] = "application/json";
     ofPostRequest("http://host.docker.internal:3000/movies", body, headers);
