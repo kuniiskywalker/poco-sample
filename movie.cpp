@@ -70,8 +70,6 @@ Poco::JSON::Object::Ptr Movie::get(string endpoint)
     	string msg = string("Poco Exception : ") + ex.what() + ", message: " + ex.message();
     	cout << msg << endl;
     }
-
-    // return 0;
 }
 
 std::string Movie::post(string url, string body, std::map<string,string> headers) {

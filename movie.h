@@ -5,8 +5,8 @@
 
 class Movie{
 public:
-    Poco::JSON::Object::Ptr get(std::string endpoint);
-    std::string post(std::string url, std::string body, std::map<std::string, std::string> headers);
+    static Poco::JSON::Object::Ptr get(std::string endpoint);
+    static std::string post(std::string url, std::string body, std::map<std::string, std::string> headers);
 };
 
 #endif // _MOVIE_H_

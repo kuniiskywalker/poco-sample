@@ -12,9 +12,7 @@ int main(int argc, char **argv)
 
     string body = "{ \"id\":" + id + ", \"name\": \"" + name + "\" }";
 
-    Movie m;
-
     map<string,string> headers;
     headers["Content-Type"] = "application/json";
-    m.post("http://host.docker.internal:3000/movies", body, headers);
+    Movie::post("http://host.docker.internal:3000/movies", body, headers);
 }
