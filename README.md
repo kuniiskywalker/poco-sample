@@ -20,10 +20,5 @@ make build
 
 ### Post Sending
 ```
-make run ARG="./get.o"
-```
-
-### Post Sending
-```
-make run ARG="./post.o {Id} {Name}"
+make run ARG="{Id} {Name}"
 ```
